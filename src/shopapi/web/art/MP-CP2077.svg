@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Cyberpunk 2077: Ultimate Edition">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#150d28"/>
+      <stop offset="55%" stop-color="#150d28"/>
+      <stop offset="100%" stop-color="#6b3fc4" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#6b3fc4" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#6b3fc4" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#6b3fc4" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><rect x="-20" y="364" width="84" height="324" fill="#000" opacity="0.30"/><rect x="-7" y="428" width="8" height="12" fill="#6b3fc4" opacity="0.51"/><rect x="37" y="474" width="8" height="12" fill="#6b3fc4" opacity="0.43"/><rect x="-1" y="566" width="8" height="12" fill="#6b3fc4" opacity="0.71"/><rect x="70" y="280" width="92" height="408" fill="#000" opacity="0.46"/><rect x="96" y="528" width="8" height="12" fill="#6b3fc4" opacity="0.77"/><rect x="109" y="620" width="8" height="12" fill="#6b3fc4" opacity="0.48"/><rect x="168" y="153" width="56" height="535" fill="#000" opacity="0.62"/><rect x="193" y="309" width="8" height="12" fill="#6b3fc4" opacity="0.54"/><rect x="200" y="493" width="8" height="12" fill="#6b3fc4" opacity="0.53"/><rect x="187" y="539" width="8" height="12" fill="#6b3fc4" opacity="0.63"/><rect x="230" y="423" width="41" height="265" fill="#000" opacity="0.30"/><rect x="246" y="579" width="8" height="12" fill="#6b3fc4" opacity="0.84"/><rect x="277" y="349" width="92" height="339" fill="#000" opacity="0.46"/><rect x="331" y="505" width="8" height="12" fill="#6b3fc4" opacity="0.50"/><rect x="376" y="423" width="107" height="265" fill="#000" opacity="0.62"/><rect x="462" y="579" width="8" height="12" fill="#6b3fc4" opacity="0.67"/><rect x="489" y="337" width="105" height="351" fill="#000" opacity="0.30"/><rect x="502" y="493" width="8" height="12" fill="#6b3fc4" opacity="0.74"/><rect x="538" y="539" width="8" height="12" fill="#6b3fc4" opacity="0.63"/><rect x="600" y="268" width="56" height="420" fill="#000" opacity="0.46"/><rect x="619" y="378" width="8" height="12" fill="#6b3fc4" opacity="0.76"/><rect x="631" y="424" width="8" height="12" fill="#6b3fc4" opacity="0.77"/><rect x="632" y="608" width="8" height="12" fill="#6b3fc4" opacity="0.43"/><rect x="633" y="654" width="8" height="12" fill="#6b3fc4" opacity="0.43"/><rect y="688" width="640" height="112" fill="#000" opacity="0.45"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🌃</text>
+</svg>

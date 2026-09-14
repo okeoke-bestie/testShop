@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Super Mario Bros. Wonder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#46101a"/>
+      <stop offset="55%" stop-color="#46101a"/>
+      <stop offset="100%" stop-color="#ff4d4d" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#ff4d4d" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#ff4d4d" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#ff4d4d" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><polygon points="288,203 487,203 392,308" fill="#000" opacity="0.45"/><ellipse cx="388" cy="203" rx="99" ry="24" fill="#ff4d4d" opacity="0.75"/><ellipse cx="373" cy="195" rx="60" ry="12" fill="#fff" opacity="0.18"/><polygon points="262,300 373,300 327,359" fill="#000" opacity="0.45"/><ellipse cx="317" cy="300" rx="56" ry="13" fill="#ff4d4d" opacity="0.75"/><ellipse cx="309" cy="296" rx="33" ry="7" fill="#fff" opacity="0.18"/><polygon points="393,410 584,410 479,510" fill="#000" opacity="0.45"/><ellipse cx="489" cy="410" rx="95" ry="23" fill="#ff4d4d" opacity="0.75"/><ellipse cx="474" cy="402" rx="57" ry="11" fill="#fff" opacity="0.18"/><polygon points="147,548 286,548 227,620" fill="#000" opacity="0.45"/><ellipse cx="216" cy="548" rx="69" ry="17" fill="#ff4d4d" opacity="0.75"/><ellipse cx="206" cy="542" rx="42" ry="8" fill="#fff" opacity="0.18"/><polygon points="438,640 619,640 518,734" fill="#000" opacity="0.45"/><ellipse cx="528" cy="640" rx="90" ry="22" fill="#ff4d4d" opacity="0.75"/><ellipse cx="515" cy="632" rx="54" ry="11" fill="#fff" opacity="0.18"/><rect y="704" width="640" height="96" fill="#000" opacity="0.32"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🍄</text>
+</svg>

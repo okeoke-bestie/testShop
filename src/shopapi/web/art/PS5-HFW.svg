@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Horizon Forbidden West">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1430"/>
+      <stop offset="55%" stop-color="#0a1430"/>
+      <stop offset="100%" stop-color="#2a5cff" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#2a5cff" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#2a5cff" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#2a5cff" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><path d="M-40,128 Q224,27 461,118 T680,88" fill="none" stroke="#2a5cff" stroke-width="28" opacity="0.16" stroke-linecap="round"/><path d="M-40,168 Q224,73 461,158 T680,128" fill="none" stroke="#2a5cff" stroke-width="23" opacity="0.13" stroke-linecap="round"/><path d="M-40,208 Q224,83 461,198 T680,168" fill="none" stroke="#2a5cff" stroke-width="18" opacity="0.10" stroke-linecap="round"/><path d="M-40,248 Q224,102 461,238 T680,208" fill="none" stroke="#2a5cff" stroke-width="13" opacity="0.07" stroke-linecap="round"/><polygon points="0,800 0,496 80,405 160,492 240,394 320,481 400,327 480,485 560,367 640,466 720,326 800,476 640,800" fill="#2a5cff" opacity="0.22"/><polygon points="0,800 0,576 107,414 213,543 320,493 427,547 533,494 640,566 747,404 853,562 640,800" fill="#2a5cff" opacity="0.34"/><polygon points="0,800 0,672 107,541 213,639 320,529 427,667 533,512 640,645 747,475 853,672 640,800" fill="#000" opacity="0.42"/><rect y="688" width="640" height="112" fill="#000" opacity="0.30"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🏹</text>
+</svg>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GAMEPORT — магазин игр и консолей</title>
+<meta name="description" content="Консоли, игры и аксессуары. Доставка по России.">
+<link rel="stylesheet" href="/static/app.css?v=__ASSET_VERSION__">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+
+<a class="skip-link" href="#catalog">Перейти к каталогу</a>
+
+<!-- Полоса видна на КАЖДОЙ странице, а не только в разделе «О нас».
+     Сайт открыт всем, магазин выглядит настоящим, а он выдуманный:
+     цены, адреса и отзывы демонстрационные. Человек, попавший сюда
+     по ссылке, должен понять это сразу, а не после оформления заказа. -->
+<div class="demobar" role="note">
+  <span class="demobar__dot" aria-hidden="true"></span>
+  <span><strong>Демонстрационный проект.</strong> Магазин вымышленный:
+  товары не продаются, оплата не принимается<span class="demobar__more">,
+  отзывы и профили в каталоге — тестовые данные</span>.</span>
+  <a class="demobar__link" href="/about" data-nav="about">Подробнее</a>
+</div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#" aria-label="GAMEPORT, на главную">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 9.5A3.5 3.5 0 0 1 7.5 6h9A3.5 3.5 0 0 1 20 9.5v5A3.5 3.5 0 0 1 16.5 18c-1.2 0-1.9-.6-2.5-1.2-.6-.6-1-1.3-2-1.3s-1.4.7-2 1.3C7.4 17.4 6.7 18 5.5 18"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="15.5" cy="10.5" r="1.1" fill="currentColor"/>
+          <circle cx="17.5" cy="13" r="1.1" fill="currentColor"/>
+          <path d="M8 10v3M6.5 11.5h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo__text">GAMEPORT</span>
+    </a>
+
+    <nav class="nav" aria-label="Разделы">
+      <a class="nav__link" href="/" data-nav="catalog">Каталог</a>
+      <a class="nav__link" href="/reviews" data-nav="reviews">Отзывы</a>
+      <a class="nav__link" href="/delivery" data-nav="delivery">Доставка</a>
+      <a class="nav__link" href="/contacts" data-nav="contacts">Контакты</a>
+      <a class="nav__link" href="/about" data-nav="about">О нас</a>
+    </nav>
+
+    <div class="search">
+      <svg class="search__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/>
+        <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <input type="search" id="search" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу"
+             autocomplete="off" spellcheck="false">
+      <button class="search__clear" id="search-clear" type="button" aria-label="Очистить" hidden>&times;</button>
+    </div>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Сменить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2.8v2M12 19.2v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.8 12h2M19.2 12h2M4.6 19.4 6 18M18 6l1.4-1.4"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn icon-btn--profile" id="profile-open" type="button"
+              aria-label="Профиль">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8.5" r="3.6" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M4.8 20c.9-3.5 3.8-5.4 7.2-5.4s6.3 1.9 7.2 5.4"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="icon-btn__dot" id="profile-dot" hidden></span>
+      </button>
+
+      <button class="cart-btn" id="cart-open" type="button" aria-label="Открыть корзину">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 4h2.2l2 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L20.5 8H6.2"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+          <circle cx="17" cy="20" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-btn__label">Корзина</span>
+        <span class="cart-btn__badge" id="cart-count" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= КАТАЛОГ ================= -->
+<div class="page" data-page="catalog">
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <span class="hero__eyebrow">Новое поколение уже здесь</span>
+        <h1 class="hero__title">Играй<br>без компромиссов</h1>
+        <p class="hero__lead">
+          Консоли, игры и аксессуары с доставкой по России.
+          Официальная гарантия, самовывоз в день заказа.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#catalog">Смотреть каталог</a>
+          <a class="btn btn--ghost btn--lg" href="#catalog" data-category="Консоли">Консоли</a>
+        </div>
+        <ul class="hero__facts">
+          <li><strong id="fact-products">—</strong><span>товаров в наличии</span></li>
+          <li><strong id="fact-orders">—</strong><span>заказов оформлено</span></li>
+          <li><strong>0 ₽</strong><span>доставка от 5 000 ₽</span></li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__card hero__card--1">🎮</div>
+        <div class="hero__card hero__card--2">🕹️</div>
+        <div class="hero__card hero__card--3">🎧</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Преимущества">
+    <div class="strip__inner">
+      <div class="strip__item"><span aria-hidden="true">🚚</span> Доставка 1–3 дня</div>
+      <div class="strip__item"><span aria-hidden="true">🛡️</span> Гарантия 24 месяца</div>
+      <div class="strip__item"><span aria-hidden="true">↩️</span> Возврат 14 дней</div>
+      <div class="strip__item"><span aria-hidden="true">💳</span> Оплата при получении</div>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="catalog__head">
+      <div>
+        <h2 class="section-title">Каталог</h2>
+        <p class="section-sub" id="catalog-summary">Загружаем товары…</p>
+      </div>
+      <div class="sort">
+        <label for="sort">Сортировка</label>
+        <select id="sort">
+          <option value="featured">Рекомендуемые</option>
+          <option value="title">По названию</option>
+          <option value="year">Сначала новинки</option>
+          <option value="price-asc">Сначала дешёвые</option>
+          <option value="price-desc">Сначала дорогие</option>
+          <option value="stock">Сначала в наличии</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="chips chips--platforms" id="platforms" role="tablist"
+         aria-label="Платформы"></div>
+
+    <div class="chips" id="categories" role="tablist" aria-label="Категории"></div>
+
+    <div class="grid" id="grid" aria-live="polite"></div>
+
+    <div class="empty" id="empty" hidden>
+      <div class="empty__art" aria-hidden="true">🔍</div>
+      <h3>Ничего не нашлось</h3>
+      <p>Попробуйте изменить запрос или выбрать другую категорию.</p>
+      <button class="btn btn--ghost" id="reset-filters" type="button">Сбросить фильтры</button>
+    </div>
+  </section>
+
+  <section class="orders" id="orders" hidden>
+    <h2 class="section-title">Последние заказы</h2>
+    <p class="section-sub">Заказы лежат в базе — обнови страницу, они останутся на месте.</p>
+    <div class="orders__list" id="orders-list"></div>
+  </section>
+</div>
+
+<!-- ================= ТОВАР ================= -->
+<div class="page" data-page="product" hidden>
+  <section class="section section--product">
+    <nav class="crumbs" aria-label="Хлебные крошки">
+      <a href="/" data-nav="catalog">Каталог</a>
+      <span aria-hidden="true">›</span>
+      <span id="crumb-category">—</span>
+    </nav>
+
+    <div class="product" id="product-body">
+      <div class="product__skeleton">Загружаем товар…</div>
+    </div>
+
+    <div class="product-tabs" id="product-tabs" hidden>
+      <h2 class="section-title">Характеристики</h2>
+      <table class="specs" id="product-specs"></table>
+
+      <h2 class="section-title" id="product-reviews-title">Отзывы</h2>
+      <div class="rating rating--product" id="product-rating"></div>
+
+      <div class="review-cta" id="review-cta"></div>
+
+      <div class="reviews reviews--product" id="product-reviews"></div>
+
+      <h2 class="section-title">С этим товаром покупают</h2>
+      <div class="grid grid--compact" id="product-recommendations"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ПРОФИЛЬ ================= -->
+<div class="page" data-page="profile" hidden>
+  <section class="pagehead">
+    <div class="pagehead__inner">
+      <span class="pagehead__eyebrow">Личный кабинет</span>
+      <h1 class="pagehead__title">Профиль</h1>
+      <p class="pagehead__lead">
+        Заказы, покупки и отзывы. Отзыв о товаре можно оставить только
+        после покупки — это проверяет сервер, а не кнопка на странице.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="profile" id="profile-body">
+      <div class="profile__empty" id="profile-empty">
+        <div class="profile__art" aria-hidden="true">👤</div>
+        <h3>Загружаем…</h3>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ОТЗЫВЫ ================= -->
+<div class="page" data-page="reviews" hidden>
+  <section class="pagehead">
+    <div class="pagehead__inner">
+      <span class="pagehead__eyebrow">Что говорят покупатели</span>
+      <h1 class="pagehead__title">Отзывы</h1>
+      <p class="pagehead__lead">
+        Оценки и комментарии к заказам. Отзыв можно оставить внизу страницы —
+        он сохранится в базе и появится в списке сразу.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="rating" id="rating"></div>
+
+
+
+    <div class="reviews" id="reviews-list"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Оставить отзыв</h2>
+    <p class="section-sub">Он уйдёт в базу без пометки «демо» — как настоящий.</p>
+
+    <form class="form" id="review-form" novalidate>
+      <div class="form__row">
+        <label class="field">
+          <span class="field__label">Имя</span>
+          <input class="field__input" name="author" maxlength="80" required
+                 placeholder="Как вас зовут">
+        </label>
+        <label class="field">
+          <span class="field__label">Оценка</span>
+          <select class="field__input" name="rating">
+            <option value="5">5 — отлично</option>
+            <option value="4">4 — хорошо</option>
+            <option value="3">3 — нормально</option>
+            <option value="2">2 — так себе</option>
+            <option value="1">1 — плохо</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">
+        <span class="field__label">Заголовок <span class="field__opt">необязательно</span></span>
+        <input class="field__input" name="title" maxlength="120"
+               placeholder="Коротко о главном">
+      </label>
+      <label class="field">
+        <span class="field__label">Отзыв</span>
+        <textarea class="field__input field__input--area" name="body" rows="5"
+                  maxlength="4000" required placeholder="Что понравилось, что нет"></textarea>
+      </label>
+      <div class="form__foot">
+        <button class="btn btn--primary btn--lg" type="submit" id="review-submit">
+          Отправить отзыв
+        </button>
+        <p class="form__hint">
+          Проверки стоят и в форме, и на сервере, и в схеме базы:
+          клиент может быть не наш, а данные портить нельзя.
+        </p>
+      </div>
+    </form>
+  </section>
+</div>
+
+<!-- ================= ДОСТАВКА ================= -->
+<div class="page" data-page="delivery" hidden>
+  <section class="pagehead">
+    <div class="pagehead__inner">
+      <span class="pagehead__eyebrow">Как получить заказ</span>
+      <h1 class="pagehead__title">Доставка и оплата</h1>
+      <p class="pagehead__lead">
+        Собираем заказ в день оформления, если он сделан до 18:00.
+        Всё, что ниже, — условия выдуманного магазина для учебного проекта.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cards3">
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🚚</div>
+        <h3>Курьером по городу</h3>
+        <p class="infocard__price">от 0 ₽</p>
+        <p>Сегодня или завтра, интервал на выбор. Бесплатно при заказе от 5 000 ₽,
+           иначе 390 ₽.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">📦</div>
+        <h3>В пункт выдачи</h3>
+        <p class="infocard__price">от 190 ₽</p>
+        <p>Более 12 000 точек по России. Срок 2–5 дней в зависимости от региона.
+           Хранение 7 дней.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🏬</div>
+        <h3>Самовывоз</h3>
+        <p class="infocard__price">бесплатно</p>
+        <p>Из магазина на Пресненской набережной. Собираем за час,
+           придёт уведомление.</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">Оплата</h2>
+    <div class="cards3">
+      <article class="infocard infocard--plain">
+        <h3>Картой онлайн</h3>
+        <p>Мир, Visa, Mastercard. Деньги списываются после сборки заказа.</p>
+      </article>
+      <article class="infocard infocard--plain">
+        <h3>При получении</h3>
+        <p>Наличными или картой курьеру и в пункте выдачи.</p>
+      </article>
+      <article class="infocard infocard--plain">
+        <h3>Рассрочка</h3>
+        <p>На 6 или 12 месяцев без переплаты, для заказов от 15 000 ₽.</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">Частые вопросы</h2>
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Можно ли вернуть игру, если не понравилась?</summary>
+        <p>Запечатанный диск — в течение 14 дней. Вскрытую коробку вернуть нельзя:
+           вместе с диском передаётся лицензия.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Консоль привезут с гарантией?</summary>
+        <p>Да, 24 месяца. Гарантийный талон и чек кладём в коробку,
+           электронная копия приходит на почту.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Что с предзаказами?</summary>
+        <p>Деньги списываются в день выхода, не раньше. Отменить предзаказ
+           можно в любой момент до отправки.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Доставите в другой город?</summary>
+        <p>Да, в любой город России, где есть пункты выдачи партнёров.
+           Крупную технику везут отдельной службой.</p>
+      </details>
+    </div>
+  </section>
+</div>
+
+<!-- ================= КОНТАКТЫ ================= -->
+<div class="page" data-page="contacts" hidden>
+  <section class="pagehead">
+    <div class="pagehead__inner">
+      <span class="pagehead__eyebrow">Связаться с нами</span>
+      <h1 class="pagehead__title">Контакты</h1>
+      <p class="pagehead__lead">
+        Отвечаем в течение часа в рабочее время. Данные ниже — выдуманные,
+        это учебный проект.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contacts">
+      <div class="contacts__list">
+        <div class="contact">
+          <div class="contact__icon" aria-hidden="true">📞</div>
+          <div>
+            <div class="contact__label">Телефон</div>
+            <a class="contact__value" href="tel:+78005550101">8 800 555-01-01</a>
+            <div class="contact__note">Бесплатно по России, ежедневно 9:00–21:00</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="contact__icon" aria-hidden="true">✉️</div>
+          <div>
+            <div class="contact__label">Почта</div>
+            <a class="contact__value" href="mailto:hello@gameport.example">hello@gameport.example</a>
+            <div class="contact__note">Домен example зарезервирован для примеров —
+              письмо никуда не уйдёт</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="contact__icon" aria-hidden="true">📍</div>
+          <div>
+            <div class="contact__label">Магазин</div>
+            <div class="contact__value">Москва, Пресненская набережная, 12</div>
+            <div class="contact__note">Ежедневно 10:00–22:00, самовывоз до 21:30</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="contact__icon" aria-hidden="true">🧾</div>
+          <div>
+            <div class="contact__label">Реквизиты</div>
+            <div class="contact__value">ООО «Геймпорт Ритейл»</div>
+            <div class="contact__note">ИНН 7700000000, ОГРН 1000000000000 — числа условные</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts__map" aria-hidden="true">
+        <div class="map">
+          <div class="map__grid"></div>
+          <div class="map__road map__road--h"></div>
+          <div class="map__road map__road--v"></div>
+          <div class="map__river"></div>
+          <div class="map__pin"><span>🎮</span></div>
+          <div class="map__label">Пресненская наб., 12</div>
+        </div>
+        <p class="contacts__mapnote">
+          Схема нарисована в CSS: подключать карточный сервис
+          учебному проекту незачем — это лишний ключ и лишние запросы.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Служба поддержки</h2>
+    <div class="cards3">
+      <article class="infocard infocard--plain">
+        <h3>Вопрос по заказу</h3>
+        <p>Напишите номер заказа в чат на сайте — ответим быстрее всего.</p>
+      </article>
+      <article class="infocard infocard--plain">
+        <h3>Гарантийный случай</h3>
+        <p>Оформите заявку на почте, приложите фото и номер чека.</p>
+      </article>
+      <article class="infocard infocard--plain">
+        <h3>Оптовые закупки</h3>
+        <p>Для клубов и заведений действуют отдельные условия.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- ================= О НАС ================= -->
+<div class="page" data-page="about" hidden>
+  <section class="pagehead pagehead--wide">
+    <div class="pagehead__inner">
+      <span class="pagehead__eyebrow">С 2011 года</span>
+      <h1 class="pagehead__title">Магазин для тех,<br>кто играет всерьёз</h1>
+      <p class="pagehead__lead">
+        GAMEPORT начинался как одна точка в торговом центре на окраине Москвы.
+        Сегодня это 48 магазинов в 23 городах, склад в Подмосковье
+        и доставка по всей стране.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="numbers">
+      <div class="number"><strong>48</strong><span>магазинов по России</span></div>
+      <div class="number"><strong>23</strong><span>города присутствия</span></div>
+      <div class="number"><strong>1,2 млн</strong><span>заказов доставлено</span></div>
+      <div class="number"><strong>14 лет</strong><span>на рынке</span></div>
+    </div>
+
+    <h2 class="section-title">Как всё начиналось</h2>
+    <div class="story">
+      <div class="story__item">
+        <div class="story__year">2011</div>
+        <div>
+          <h3>Первый магазин</h3>
+          <p>Три сотрудника, витрина на двадцать квадратных метров и полка
+             с дисками. Продавали то, во что играли сами, — и советовали
+             честно, даже когда это значило продать дешевле.</p>
+        </div>
+      </div>
+      <div class="story__item">
+        <div class="story__year">2015</div>
+        <div>
+          <h3>Свой склад и доставка</h3>
+          <p>Открыли склад в Подмосковье и перестали зависеть от поставщиков
+             в сроках. С этого момента новинки приезжают к покупателям
+             в день старта продаж, а не через неделю.</p>
+        </div>
+      </div>
+      <div class="story__item">
+        <div class="story__year">2019</div>
+        <div>
+          <h3>Сервисный центр</h3>
+          <p>Запустили собственный сервис: ремонт по гарантии и без неё,
+             чистка консолей, замена стиков. Раньше приходилось отправлять
+             технику производителю и ждать месяц.</p>
+        </div>
+      </div>
+      <div class="story__item">
+        <div class="story__year">2024</div>
+        <div>
+          <h3>48 магазинов</h3>
+          <p>Дошли до Владивостока и Калининграда. В каждом магазине —
+             зона, где можно поиграть перед покупкой: консоль, телевизор
+             и полчаса вашего времени.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Во что мы верим</h2>
+    <div class="cards3">
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🎯</div>
+        <h3>Советуем, а не продаём</h3>
+        <p>Консультант получает зарплату, а не процент с чека. Если вам
+           подойдёт версия дешевле — вам скажут именно это.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">📦</div>
+        <h3>Только официальные поставки</h3>
+        <p>Работаем напрямую с дистрибьюторами. Гарантия производителя,
+           чек и полная комплектация — по умолчанию, а не за доплату.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🛠️</div>
+        <h3>Чиним сами</h3>
+        <p>Свой сервисный центр: диагностика бесплатно, гарантийный
+           ремонт без отправки производителю.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🕹️</div>
+        <h3>Можно попробовать</h3>
+        <p>В каждом магазине стоят консоли всех поколений. Приходите
+           поиграть — покупать не обязательно.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">♻️</div>
+        <h3>Приём техники</h3>
+        <p>Меняем старую консоль на новую с доплатой. Оценка на месте,
+           деньги сразу.</p>
+      </article>
+      <article class="infocard">
+        <div class="infocard__icon" aria-hidden="true">🎁</div>
+        <h3>Клуб GAMEPORT</h3>
+        <p>Баллы за покупки, ранний доступ к предзаказам и закрытые
+           турниры по выходным.</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">Команда</h2>
+    <div class="team">
+      <article class="person">
+        <div class="person__photo" aria-hidden="true">АК</div>
+        <div class="person__name">Алексей Ковалёв</div>
+        <div class="person__role">Основатель</div>
+        <p>Собрал первый магазин на деньги от продажи собственной коллекции
+           картриджей. До сих пор лично проверяет ассортимент.</p>
+      </article>
+      <article class="person">
+        <div class="person__photo" aria-hidden="true">МС</div>
+        <div class="person__name">Марина Соловьёва</div>
+        <div class="person__role">Директор по рознице</div>
+        <p>Отвечает за магазины и за то, чтобы в каждом было во что
+           поиграть до покупки.</p>
+      </article>
+      <article class="person">
+        <div class="person__photo" aria-hidden="true">ДЛ</div>
+        <div class="person__name">Дмитрий Лапин</div>
+        <div class="person__role">Руководитель сервиса</div>
+        <p>Пятнадцать лет чинит консоли. Считает, что почти любую технику
+           можно вернуть к жизни.</p>
+      </article>
+      <article class="person">
+        <div class="person__photo" aria-hidden="true">ЕВ</div>
+        <div class="person__name">Екатерина Воронина</div>
+        <div class="person__role">Поддержка покупателей</div>
+        <p>Следит, чтобы на письмо отвечали за час, а не за день.
+           Лично разбирает сложные случаи.</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">Работа в GAMEPORT</h2>
+    <div class="cta">
+      <div>
+        <h3>Ищем продавцов-консультантов и инженеров сервиса</h3>
+        <p>Официальное оформление, обучение за счёт компании, скидка
+           сотрудникам и гибкий график для студентов.</p>
+      </div>
+      <a class="btn btn--primary btn--lg" href="/contacts" data-nav="contacts">
+        Написать нам
+      </a>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true">🎮</span>
+        <span class="logo__text">GAMEPORT</span>
+      </div>
+      <p class="footer__note">
+        Учебный проект: FastAPI + PostgreSQL. Заказы действительно
+        сохраняются в базе, остатки действительно уменьшаются.
+      </p>
+    </div>
+    <div class="footer__meta">
+      <span id="footer-backend">база: —</span>
+      <a href="/docs">Документация API</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ---------- корзина ---------- -->
+<div class="drawer-backdrop" id="backdrop" hidden></div>
+
+<aside class="drawer" id="cart" aria-label="Корзина" aria-hidden="true">
+  <header class="drawer__head">
+    <h2 id="cart-title">Корзина</h2>
+    <button class="icon-btn" id="cart-close" type="button" aria-label="Закрыть корзину">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <div class="drawer__body" id="cart-body">
+    <div class="cart-empty" id="cart-empty">
+      <div class="cart-empty__art" aria-hidden="true">🛒</div>
+      <h3>Пока пусто</h3>
+      <p>Добавьте товары из каталога — они появятся здесь.</p>
+      <button class="btn btn--primary" id="cart-continue" type="button">За покупками</button>
+    </div>
+    <ul class="cart-lines" id="cart-lines"></ul>
+  </div>
+
+  <footer class="drawer__foot" id="cart-foot" hidden>
+    <div class="totals">
+      <div class="totals__row"><span>Товары</span><span id="total-items">0</span></div>
+      <div class="totals__row"><span>Доставка</span><span id="total-shipping">0 ₽</span></div>
+      <div class="totals__row totals__row--main"><span>Итого</span><span id="total-sum">0 ₽</span></div>
+    </div>
+    <button class="btn btn--primary btn--block btn--lg" id="checkout" type="button">
+      Оформить заказ
+    </button>
+    <p class="drawer__hint">
+      Запрос уйдёт с ключом идемпотентности — повторное нажатие
+      не создаст второй заказ.
+    </p>
+  </footer>
+
+  <div class="success" id="success" hidden>
+    <div class="success__check" aria-hidden="true">
+      <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 15-16"/></svg>
+    </div>
+    <h3>Заказ оформлен</h3>
+    <p class="success__num">№ <span id="success-id">—</span></p>
+    <p class="success__text">
+      Остатки на складе уже уменьшились — это настоящая запись
+      в PostgreSQL, а не анимация.
+    </p>
+    <div class="success__actions">
+      <button class="btn btn--primary btn--block" id="success-close" type="button">Отлично</button>
+      <button class="btn btn--ghost btn--block" id="success-cancel" type="button">Отменить заказ</button>
+    </div>
+  </div>
+</aside>
+
+<div class="toasts" id="toasts" aria-live="assertive"></div>
+
+<script src="/static/app.js?v=__ASSET_VERSION__"></script>
+</body>
+</html>

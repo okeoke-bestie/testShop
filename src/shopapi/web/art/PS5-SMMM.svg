@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Marvel's Spider-Man: Miles Morales">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1430"/>
+      <stop offset="55%" stop-color="#0a1430"/>
+      <stop offset="100%" stop-color="#2a5cff" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#2a5cff" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#2a5cff" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#2a5cff" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><path d="M-40,128 Q224,-15 461,118 T680,88" fill="none" stroke="#2a5cff" stroke-width="28" opacity="0.16" stroke-linecap="round"/><path d="M-40,168 Q224,66 461,158 T680,128" fill="none" stroke="#2a5cff" stroke-width="23" opacity="0.13" stroke-linecap="round"/><path d="M-40,208 Q224,106 461,198 T680,168" fill="none" stroke="#2a5cff" stroke-width="18" opacity="0.10" stroke-linecap="round"/><path d="M-40,248 Q224,117 461,238 T680,208" fill="none" stroke="#2a5cff" stroke-width="13" opacity="0.07" stroke-linecap="round"/><polygon points="0,800 0,496 80,384 160,468 240,430 320,493 400,430 480,488 560,408 640,468 720,377 800,468 640,800" fill="#2a5cff" opacity="0.22"/><polygon points="0,800 0,576 107,495 213,542 320,484 427,576 533,450 640,549 747,418 853,571 640,800" fill="#2a5cff" opacity="0.34"/><polygon points="0,800 0,672 107,560 213,640 320,564 427,660 533,538 640,671 747,601 853,664 640,800" fill="#000" opacity="0.42"/><rect y="688" width="640" height="112" fill="#000" opacity="0.30"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🕷️</text>
+</svg>

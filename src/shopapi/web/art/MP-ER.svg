@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Elden Ring">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101c46"/>
+      <stop offset="55%" stop-color="#101c46"/>
+      <stop offset="100%" stop-color="#3b6fe8" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#3b6fe8" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#3b6fe8" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#3b6fe8" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><path d="M-40,128 Q224,-17 461,118 T680,88" fill="none" stroke="#3b6fe8" stroke-width="28" opacity="0.16" stroke-linecap="round"/><path d="M-40,168 Q224,62 461,158 T680,128" fill="none" stroke="#3b6fe8" stroke-width="23" opacity="0.13" stroke-linecap="round"/><path d="M-40,208 Q224,65 461,198 T680,168" fill="none" stroke="#3b6fe8" stroke-width="18" opacity="0.10" stroke-linecap="round"/><path d="M-40,248 Q224,146 461,238 T680,208" fill="none" stroke="#3b6fe8" stroke-width="13" opacity="0.07" stroke-linecap="round"/><polygon points="0,800 0,496 80,400 160,491 240,372 320,472 400,323 480,476 560,399 640,481 720,345 800,466 640,800" fill="#3b6fe8" opacity="0.22"/><polygon points="0,800 0,576 107,380 213,545 320,494 427,539 533,444 640,564 747,445 853,538 640,800" fill="#3b6fe8" opacity="0.34"/><polygon points="0,800 0,672 107,483 213,668 320,561 427,661 533,497 640,654 747,536 853,668 640,800" fill="#000" opacity="0.42"/><rect y="688" width="640" height="112" fill="#000" opacity="0.30"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🌗</text>
+</svg>

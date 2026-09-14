@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: God of War (2018)">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1a3a"/>
+      <stop offset="55%" stop-color="#0b1a3a"/>
+      <stop offset="100%" stop-color="#1f4fd8" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="448" cy="192" r="190" fill="#1f4fd8" opacity="0.10"/><circle cx="448" cy="192" r="110" fill="#1f4fd8" opacity="0.16"/><circle cx="448" cy="192" r="62" fill="#1f4fd8" opacity="0.55"/><circle cx="448" cy="192" r="62" fill="none" stroke="#fff" stroke-width="2" opacity="0.30"/><path d="M-40,128 Q224,22 461,118 T680,88" fill="none" stroke="#1f4fd8" stroke-width="28" opacity="0.16" stroke-linecap="round"/><path d="M-40,168 Q224,26 461,158 T680,128" fill="none" stroke="#1f4fd8" stroke-width="23" opacity="0.13" stroke-linecap="round"/><path d="M-40,208 Q224,90 461,198 T680,168" fill="none" stroke="#1f4fd8" stroke-width="18" opacity="0.10" stroke-linecap="round"/><path d="M-40,248 Q224,115 461,238 T680,208" fill="none" stroke="#1f4fd8" stroke-width="13" opacity="0.07" stroke-linecap="round"/><polygon points="0,800 0,496 80,343 160,479 240,366 320,470 400,370 480,495 560,379 640,486 720,346 800,493 640,800" fill="#1f4fd8" opacity="0.22"/><polygon points="0,800 0,576 107,413 213,543 320,377 427,569 533,376 640,570 747,477 853,573 640,800" fill="#1f4fd8" opacity="0.34"/><polygon points="0,800 0,672 107,552 213,635 320,493 427,667 533,512 640,649 747,556 853,658 640,800" fill="#000" opacity="0.42"/><rect y="688" width="640" height="112" fill="#000" opacity="0.30"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🪓</text>
+</svg>

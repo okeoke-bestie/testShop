@@ -1,0 +1,709 @@
+{
+  "_комментарий": [
+    "ВЫДУМАННЫЕ профили покупателей для учебного проекта.",
+    "В базе помечены флагом is_demo и удаляются одним запросом.",
+    "Домен example.com зарезервирован стандартом под примеры."
+  ],
+  "customers": [
+    {
+      "name": "Кристина В.",
+      "email": "kristina.vinogradova86@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Антон О.",
+      "email": "anton.orlov81@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Глеб Т.",
+      "email": "gleb.tarasov37@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Екатерина М.",
+      "email": "ekaterina.makarova99@example.com",
+      "city": "Красноярск"
+    },
+    {
+      "name": "Никита Б.",
+      "email": "nikita.bogdanov57@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Алина Н.",
+      "email": "alina.novikova70@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Марк С.",
+      "email": "mark.sokolov37@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Марина М.",
+      "email": "marina.makarova70@example.com",
+      "city": "Краснодар"
+    },
+    {
+      "name": "Марина В.",
+      "email": "marina.volkova45@example.com",
+      "city": "Краснодар"
+    },
+    {
+      "name": "Алексей Комаров",
+      "email": "aleksey.komarov5@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Кристина К.",
+      "email": "kristina.kiseleva69@example.com",
+      "city": "Омск"
+    },
+    {
+      "name": "Олег Морозов",
+      "email": "oleg.morozov47@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Никита К.",
+      "email": "nikita.komarov20@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Кирилл Н.",
+      "email": "kirill.novikov33@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Степан Зайцев",
+      "email": "stepan.zaycev42@example.com",
+      "city": "Краснодар"
+    },
+    {
+      "name": "Никита Ф.",
+      "email": "nikita.fedorov51@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Глеб З.",
+      "email": "gleb.zaycev15@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Ольга П.",
+      "email": "olga.popova89@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Глеб Беляев",
+      "email": "gleb.belyaev17@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Марина Зайцева",
+      "email": "marina.zayceva9@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Сергей Фёдоров",
+      "email": "sergey.fedorov37@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Наталья К.",
+      "email": "natalya.kuznecova71@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Глеб В.",
+      "email": "gleb.vorobev47@example.com",
+      "city": "Омск"
+    },
+    {
+      "name": "Егор И.",
+      "email": "egor.ivanov40@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "София Зайцева",
+      "email": "sofiya.zayceva62@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Алиса Б.",
+      "email": "alisa.bogdanova23@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Алиса Соколова",
+      "email": "alisa.sokolova9@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Иван Виноградов",
+      "email": "ivan.vinogradov16@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Олег Г.",
+      "email": "oleg.golubev92@example.com",
+      "city": "Челябинск"
+    },
+    {
+      "name": "Денис Г.",
+      "email": "denis.golubev81@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "София М.",
+      "email": "sofiya.makarova51@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Глеб М.",
+      "email": "gleb.makarov46@example.com",
+      "city": "Челябинск"
+    },
+    {
+      "name": "Вера Кузнецова",
+      "email": "vera.kuznecova18@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Данила Беляев",
+      "email": "danila.belyaev67@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Олег Ф.",
+      "email": "oleg.fedorov30@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Дмитрий Г.",
+      "email": "dmitriy.golubev49@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Ксения Павлова",
+      "email": "kseniya.pavlova78@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Светлана П.",
+      "email": "svetlana.pavlova39@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Никита Кузнецов",
+      "email": "nikita.kuznecov26@example.com",
+      "city": "Санкт-Петербург"
+    },
+    {
+      "name": "Елена С.",
+      "email": "elena.smirnova99@example.com",
+      "city": "Красноярск"
+    },
+    {
+      "name": "Максим Богданов",
+      "email": "maksim.bogdanov87@example.com",
+      "city": "Пермь"
+    },
+    {
+      "name": "Егор О.",
+      "email": "egor.orlov82@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Виктор М.",
+      "email": "viktor.makarov44@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Роман Андреев",
+      "email": "roman.andreev53@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Никита К.",
+      "email": "nikita.kuznecov76@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Дарья Голубева",
+      "email": "darya.golubeva25@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Кристина Попова",
+      "email": "kristina.popova45@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Иван И.",
+      "email": "ivan.ivanov66@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Егор С.",
+      "email": "egor.smirnov59@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Андрей Кузнецов",
+      "email": "andrey.kuznecov78@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Иван Новиков",
+      "email": "ivan.novikov93@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Тимур Макаров",
+      "email": "timur.makarov73@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Данила П.",
+      "email": "danila.popov38@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Степан Иванов",
+      "email": "stepan.ivanov74@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Полина Орлова",
+      "email": "polina.orlova25@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Ирина Г.",
+      "email": "irina.golubeva1@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Тимур П.",
+      "email": "timur.pavlov3@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Полина Волкова",
+      "email": "polina.volkova31@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Полина Богданова",
+      "email": "polina.bogdanova95@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Денис М.",
+      "email": "denis.morozov51@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Роман М.",
+      "email": "roman.mihaylov9@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Кристина Белова",
+      "email": "kristina.belova38@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Андрей Попов",
+      "email": "andrey.popov97@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Дарья И.",
+      "email": "darya.ivanova76@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Фёдор Т.",
+      "email": "fedor.tarasov90@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Елена М.",
+      "email": "elena.makarova57@example.com",
+      "city": "Челябинск"
+    },
+    {
+      "name": "Валерия Белова",
+      "email": "valeriya.belova48@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Тимур С.",
+      "email": "timur.semenov91@example.com",
+      "city": "Волгоград"
+    },
+    {
+      "name": "Марина С.",
+      "email": "marina.sokolova9@example.com",
+      "city": "Омск"
+    },
+    {
+      "name": "Ирина Тарасова",
+      "email": "irina.tarasova4@example.com",
+      "city": "Красноярск"
+    },
+    {
+      "name": "Глеб С.",
+      "email": "gleb.sokolov10@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Валерия Голубева",
+      "email": "valeriya.golubeva99@example.com",
+      "city": "Краснодар"
+    },
+    {
+      "name": "Юрий Соколов",
+      "email": "yuriy.sokolov3@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "София Кузнецова",
+      "email": "sofiya.kuznecova63@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Алина Б.",
+      "email": "alina.belova88@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Данила Ф.",
+      "email": "danila.fedorov31@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Степан Ф.",
+      "email": "stepan.fedorov36@example.com",
+      "city": "Иркутск"
+    },
+    {
+      "name": "Роман К.",
+      "email": "roman.komarov91@example.com",
+      "city": "Санкт-Петербург"
+    },
+    {
+      "name": "Полина М.",
+      "email": "polina.mihaylova67@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Анна С.",
+      "email": "anna.smirnova90@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Олег В.",
+      "email": "oleg.volkov3@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Алиса Фёдорова",
+      "email": "alisa.fedorova83@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Екатерина Комарова",
+      "email": "ekaterina.komarova50@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Валерия Воробьёва",
+      "email": "valeriya.vorobeva41@example.com",
+      "city": "Омск"
+    },
+    {
+      "name": "Никита Лебедев",
+      "email": "nikita.lebedev53@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Сергей С.",
+      "email": "sergey.sokolov24@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Денис Киселёв",
+      "email": "denis.kiselev33@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Ксения О.",
+      "email": "kseniya.orlova18@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Денис О.",
+      "email": "denis.orlov68@example.com",
+      "city": "Волгоград"
+    },
+    {
+      "name": "Полина К.",
+      "email": "polina.komarova24@example.com",
+      "city": "Воронеж"
+    },
+    {
+      "name": "Антон Г.",
+      "email": "anton.golubev17@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Олег Л.",
+      "email": "oleg.lebedev77@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Татьяна З.",
+      "email": "tatyana.zayceva75@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Дмитрий К.",
+      "email": "dmitriy.kiselev55@example.com",
+      "city": "Красноярск"
+    },
+    {
+      "name": "Алина Морозова",
+      "email": "alina.morozova44@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Алиса П.",
+      "email": "alisa.popova3@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Олег П.",
+      "email": "oleg.pavlov33@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Екатерина З.",
+      "email": "ekaterina.zayceva25@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Юлия М.",
+      "email": "yuliya.makarova43@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Дмитрий К.",
+      "email": "dmitriy.kiselev61@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Ксения Новикова",
+      "email": "kseniya.novikova37@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Алексей М.",
+      "email": "aleksey.mihaylov31@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Кристина Киселёва",
+      "email": "kristina.kiseleva75@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Светлана В.",
+      "email": "svetlana.volkova55@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Олег Орлов",
+      "email": "oleg.orlov2@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Елена Макарова",
+      "email": "elena.makarova35@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "София С.",
+      "email": "sofiya.sokolova83@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Юлия Богданова",
+      "email": "yuliya.bogdanova67@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Мария Комарова",
+      "email": "mariya.komarova66@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Тимур Белов",
+      "email": "timur.belov60@example.com",
+      "city": "Нижний Новгород"
+    },
+    {
+      "name": "Юлия Зайцева",
+      "email": "yuliya.zayceva47@example.com",
+      "city": "Екатеринбург"
+    },
+    {
+      "name": "Светлана Орлова",
+      "email": "svetlana.orlova72@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Степан В.",
+      "email": "stepan.volkov95@example.com",
+      "city": "Волгоград"
+    },
+    {
+      "name": "Полина Киселёва",
+      "email": "polina.kiseleva18@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Ирина Ф.",
+      "email": "irina.fedorova3@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Юрий Белов",
+      "email": "yuriy.belov27@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Андрей Макаров",
+      "email": "andrey.makarov19@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Дмитрий К.",
+      "email": "dmitriy.kozlov30@example.com",
+      "city": "Москва"
+    },
+    {
+      "name": "Мария Н.",
+      "email": "mariya.novikova88@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Степан Л.",
+      "email": "stepan.lebedev51@example.com",
+      "city": "Самара"
+    },
+    {
+      "name": "Дмитрий К.",
+      "email": "dmitriy.komarov34@example.com",
+      "city": "Челябинск"
+    },
+    {
+      "name": "Иван Андреев",
+      "email": "ivan.andreev11@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "София Козлова",
+      "email": "sofiya.kozlova4@example.com",
+      "city": "Новосибирск"
+    },
+    {
+      "name": "Анна К.",
+      "email": "anna.komarova4@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Марк В.",
+      "email": "mark.vorobev34@example.com",
+      "city": "Пермь"
+    },
+    {
+      "name": "Вера Воробьёва",
+      "email": "vera.vorobeva68@example.com",
+      "city": "Казань"
+    },
+    {
+      "name": "Виктор Голубев",
+      "email": "viktor.golubev87@example.com",
+      "city": "Волгоград"
+    },
+    {
+      "name": "Егор П.",
+      "email": "egor.pavlov56@example.com",
+      "city": "Уфа"
+    },
+    {
+      "name": "Иван П.",
+      "email": "ivan.popov66@example.com",
+      "city": "Хабаровск"
+    },
+    {
+      "name": "Антон В.",
+      "email": "anton.vinogradov53@example.com",
+      "city": "Красноярск"
+    },
+    {
+      "name": "Владимир Андреев",
+      "email": "vladimir.andreev78@example.com",
+      "city": "Ростов-на-Дону"
+    },
+    {
+      "name": "Ольга Виноградова",
+      "email": "olga.vinogradova23@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Андрей К.",
+      "email": "andrey.kozlov49@example.com",
+      "city": "Санкт-Петербург"
+    },
+    {
+      "name": "Дарья Б.",
+      "email": "darya.bogdanova11@example.com",
+      "city": "Сочи"
+    },
+    {
+      "name": "Роман П.",
+      "email": "roman.popov28@example.com",
+      "city": "Тюмень"
+    },
+    {
+      "name": "Антон Комаров",
+      "email": "anton.komarov34@example.com",
+      "city": "Владивосток"
+    },
+    {
+      "name": "Артём К.",
+      "email": "artem.kiselev68@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Антон Фёдоров",
+      "email": "anton.fedorov17@example.com",
+      "city": "Калининград"
+    },
+    {
+      "name": "Полина М.",
+      "email": "polina.morozova10@example.com",
+      "city": "Волгоград"
+    },
+    {
+      "name": "Степан Семёнов",
+      "email": "stepan.semenov69@example.com",
+      "city": "Пермь"
+    }
+  ]
+}

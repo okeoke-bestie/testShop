@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Halo: The Master Chief Collection">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a2a12"/>
+      <stop offset="55%" stop-color="#0a2a12"/>
+      <stop offset="100%" stop-color="#0f8f3f" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="320" cy="592" r="300" fill="#0f8f3f" opacity="0.22"/><circle cx="320" cy="624" r="170" fill="#0f8f3f" opacity="0.30"/><path d="M66,640 Q9,360 90,96" fill="none" stroke="#000" stroke-width="68" opacity="0.16" stroke-linecap="round"/><path d="M216,640 Q259,360 246,96" fill="none" stroke="#000" stroke-width="72" opacity="0.16" stroke-linecap="round"/><path d="M366,640 Q348,360 328,96" fill="none" stroke="#000" stroke-width="89" opacity="0.16" stroke-linecap="round"/><path d="M497,640 Q455,360 505,96" fill="none" stroke="#000" stroke-width="75" opacity="0.16" stroke-linecap="round"/><path d="M617,640 Q555,360 578,96" fill="none" stroke="#000" stroke-width="106" opacity="0.16" stroke-linecap="round"/><path d="M83,800 L89,680 L71,604" fill="none" stroke="#0f8f3f" stroke-width="4" opacity="0.70"/><path d="M166,800 L157,680 L160,634" fill="none" stroke="#0f8f3f" stroke-width="11" opacity="0.70"/><path d="M118,800 L144,680 L117,610" fill="none" stroke="#0f8f3f" stroke-width="9" opacity="0.70"/><path d="M590,800 L593,680 L592,562" fill="none" stroke="#0f8f3f" stroke-width="9" opacity="0.70"/><path d="M394,800 L388,680 L368,627" fill="none" stroke="#0f8f3f" stroke-width="5" opacity="0.70"/><path d="M509,800 L495,680 L513,600" fill="none" stroke="#0f8f3f" stroke-width="13" opacity="0.70"/><rect y="640" width="640" height="160" fill="#000" opacity="0.50"/><polygon points="0,800 0,650 64,610 128,635 192,583 256,636 320,571 384,643 448,595 512,641 576,604 640,640 704,567 768,636 640,800" fill="#000" opacity="0.65"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">🟢</text>
+</svg>

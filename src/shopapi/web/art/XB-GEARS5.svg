@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img"
+     aria-label="Обложка: Gears 5">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a2a12"/>
+      <stop offset="55%" stop-color="#0a2a12"/>
+      <stop offset="100%" stop-color="#0f8f3f" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/><circle cx="320" cy="592" r="300" fill="#0f8f3f" opacity="0.22"/><circle cx="320" cy="624" r="170" fill="#0f8f3f" opacity="0.30"/><path d="M112,640 Q70,360 95,96" fill="none" stroke="#000" stroke-width="54" opacity="0.16" stroke-linecap="round"/><path d="M200,640 Q192,360 185,96" fill="none" stroke="#000" stroke-width="101" opacity="0.16" stroke-linecap="round"/><path d="M364,640 Q306,360 352,96" fill="none" stroke="#000" stroke-width="110" opacity="0.16" stroke-linecap="round"/><path d="M510,640 Q504,360 492,96" fill="none" stroke="#000" stroke-width="103" opacity="0.16" stroke-linecap="round"/><path d="M635,640 Q643,360 623,96" fill="none" stroke="#000" stroke-width="60" opacity="0.16" stroke-linecap="round"/><path d="M253,800 L267,680 L227,580" fill="none" stroke="#0f8f3f" stroke-width="5" opacity="0.70"/><path d="M499,800 L523,680 L503,626" fill="none" stroke="#0f8f3f" stroke-width="7" opacity="0.70"/><path d="M60,800 L86,680 L68,557" fill="none" stroke="#0f8f3f" stroke-width="14" opacity="0.70"/><path d="M186,800 L196,680 L189,587" fill="none" stroke="#0f8f3f" stroke-width="9" opacity="0.70"/><path d="M63,800 L54,680 L65,573" fill="none" stroke="#0f8f3f" stroke-width="11" opacity="0.70"/><path d="M474,800 L450,680 L453,633" fill="none" stroke="#0f8f3f" stroke-width="6" opacity="0.70"/><rect y="640" width="640" height="160" fill="#000" opacity="0.50"/><polygon points="0,800 0,650 64,584 128,632 192,591 256,642 320,575 384,649 448,572 512,644 576,592 640,633 704,613 768,643 640,800" fill="#000" opacity="0.65"/>
+  <rect width="640" height="800" fill="url(#vignette)"/>
+  <text x="320.0" y="400.0" font-size="150" text-anchor="middle"
+        dominant-baseline="central" opacity="0.95">⚙️</text>
+</svg>

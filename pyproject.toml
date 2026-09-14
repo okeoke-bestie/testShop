@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shopapi"
+version = "6.0.0"
+description = "REST-сервис заказов: транзакции, идемпотентность, защита от оверселлинга"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# Ядро не зависит ни от чего, кроме стандартной библиотеки:
+# бизнес-логика, работа с базой и тесты запускаются без установки пакетов.
+serve = ["fastapi>=0.110", "uvicorn[standard]>=0.27", "pydantic>=2.6"]
+postgres = ["psycopg[binary,pool]>=3.1"]
+dev = ["pytest>=8.0", "ruff>=0.4", "httpx>=0.27"]
+all = ["shopapi[serve,postgres,dev]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# B008 запрещает вызовы в значениях по умолчанию — правило верное,
+# но Depends() в FastAPI это ровно тот способ, которым фреймворк
+# объявляет зависимости. Подавляем точечно, а не глобально.
+"src/shopapi/api.py" = ["B008"]

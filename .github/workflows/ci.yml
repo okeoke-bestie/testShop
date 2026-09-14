@@ -1,0 +1,61 @@
+# Тесты и линтер на каждый коммит и каждый pull request.
+#
+# Зачем это здесь: локально «у меня всё работает» — не проверка.
+# CI запускает тесты в чистом окружении, где нет ни моего .env,
+# ни случайно установленного пакета, ни базы с прошлого раза.
+#
+# PostgreSQL поднимается сервисным контейнером, а не мокается:
+# половина решений в проекте — про то, как ведёт себя настоящая
+# база под конкуренцией, и на подделке это не проверяется.
+
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: shop
+          POSTGRES_PASSWORD: shop
+          POSTGRES_DB: shop
+        ports:
+          - 5432:5432
+        # Без проверки готовности шаг с тестами стартует раньше,
+        # чем база начнёт отвечать, и падает на первом же запросе.
+        options: >-
+          --health-cmd "pg_isready -U shop"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Установить зависимости
+        run: pip install -e ".[all]"
+
+      - name: Линтер
+        run: ruff check .
+
+      - name: Тесты без PostgreSQL
+        # Отдельным шагом: ядро обязано работать на голой стандартной
+        # библиотеке, и это свойство легко потерять незаметно.
+        run: pytest -q
+
+      - name: Тесты с PostgreSQL
+        env:
+          DATABASE_URL: postgresql://shop:shop@localhost:5432/shop
+        run: pytest -q

@@ -1,0 +1,50 @@
+# Весь проект одной командой — то же, что поедет на хостинг:
+#
+#     docker compose up --build
+#     открыть http://localhost:8080
+#
+# База наполнится сама при первом старте (SHOP_AUTO_SEED в Dockerfile).
+#
+# Только база, а приложение запускать с своей машины:
+#
+#     docker compose up -d db
+#     export DATABASE_URL=postgresql://shop:shop@localhost:5432/shop
+#     python main.py migrate && python main.py seed && python main.py shop
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD: shop
+      POSTGRES_DB: shop
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # Проверка готовности: контейнер считается живым не когда процесс
+    # запустился, а когда база реально отвечает. Без этого приложение,
+    # стартующее рядом, упадёт на первом же запросе.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shop -d shop"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://shop:shop@db:5432/shop
+      # Локально сервис стоит без прокси: доверять X-Forwarded-For
+      # здесь нельзя, иначе ограничитель частоты обходится подстановкой
+      # заголовка. На хостинге эта переменная равна 1.
+      SHOP_TRUST_PROXY: "0"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
